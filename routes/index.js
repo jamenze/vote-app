@@ -17,7 +17,13 @@ connection.connect((error)=> {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+	if(req.session.name != undefined){
+		console.log(`Welcome, ${req.session.name}`);
+	};
+
+  res.render('index', { 
+  	name: req.session.name
+  });
 });
 
 router.get('/register', (req, res, next)=>{
@@ -85,6 +91,7 @@ router.post('/loginProcess', (req, res, next)=>{
 					// call compareSync
 					var passwordsMatch = bcrypt.compareSync(password,results[0].password);
 					if(passwordsMatch){
+						var row = results[0];
 						// user in database, password is legit. Log them in.
 						req.session.name = results[0].name;
 						req.session.id = results[0].id;

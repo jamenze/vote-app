@@ -3,10 +3,16 @@
   <head>
     <title>Rock or Not</title>
     <% include head %>
+
 <!--     <link rel='stylesheet' href='/stylesheets/style.css' /> -->
   </head>
   <body>
   	<% include navbar %>
+
+  	    <% if (name !== undefined){ %>
+    	<h1>Welcome, <%=name%></h1>
+    	<% } %>
+    	
     <h1>Rock or Not</h1>
   </body>
 </html>
