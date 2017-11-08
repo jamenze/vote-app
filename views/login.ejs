@@ -2,24 +2,24 @@
 <html>
 <head>
 	<title></title>
-	<% include head %>
+	<%include head%>
 </head>
 <body>
-	<% include navbar %>
+
+	<%loggedIn = false%>
+	<%include navbar%>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
 				<h1>Login</h1>
 				<form action="/loginProcess" method="post">
 					<div class="form-group">
-						
 						<label for="email">Email Address:</label>
 						<input type="email" class="form-control" name="email">
-						<label for="email">Password:</label>
-						<input type="email" class="form-control" name="password">
-
-
-						<button class="btn btn-primary">Login</button>
+						<label for="password">Password:</label>
+						<input type="password" class="form-control" name="password">
+						<button class="btn btn-primary">Login!</button>
+					</div>
 				</form>
 			</div>
 		</div>

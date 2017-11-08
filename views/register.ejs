@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Rock or Not</title>
-	<% include head %>
+	<title></title>
+	<%include head%>
 </head>
 <body>
-	<% include navbar %>
+
+	<%loggedIn = false%>
+	<%include navbar%>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
@@ -18,11 +20,11 @@
 						<input type="email" class="form-control" name="email">
 						<label for="password">Password:</label>
 						<input type="password" class="form-control" name="password">
-
 						<div class="checkbox">
-							<label><input checked type="checkbox"> Sign me up for new votes!</label>
+							<label><input type="checkbox" name="newsletter"> Sign me up for new votes!</label>
 						</div>
-						<button class="btn btn-primary">Login</button>
+						<button class="btn btn-primary">Register!</button>
+					</div>
 				</form>
 			</div>
 		</div>
